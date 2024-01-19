@@ -1,0 +1,45 @@
+{
+    "name": "ShababSoftwares/laravel-friendships",
+    "description": "This package gives Eloquent models the ability to manage their friendships.",
+    "keywords": ["laravel", "friendships", "friend-system", "friends", "eloquent"],
+    "license": "MIT",
+    "authors": [{
+        "name": "Muhammad Arif Shabab",
+        "email": "shabab.softwares@gmail.com"
+    }],
+    "autoload-dev": {
+        "classmap": [
+            "vendor/laravel/laravel/tests/TestCase.php"
+        ],
+        "files": [
+            "tests/helpers.php"
+        ],
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": ">=7.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "fzaninotto/faker": "~1.4",
+        "laravel/laravel": "^8.0",
+        "codeclimate/php-test-reporter": "^0.3.2",
+        "doctrine/dbal": "^2.5",
+        "orchestra/testbench": "^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ShababSoftwares\\Friendships\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ShababSoftwares\\Friendships\\FriendshipsServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable"
+}

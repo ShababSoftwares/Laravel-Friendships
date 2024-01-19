@@ -1,0 +1,33 @@
+language: php
+
+services:
+  - mysql
+
+php:
+  - 7.2
+  - 7.3
+  - 7.4
+
+addons:
+    code_climate:
+        repo_token: f85424364bfe37962e05e7a1a8c7781cc214b28786ed416b6c9128176713e774
+
+sudo: false
+
+cache:
+  directories:
+    - vendor
+    - $HOME/.composer/cache
+
+before_install:
+  - echo "memory_limit=2G" >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
+
+install:
+  - COMPOSER_DISCARD_CHANGES=1 composer install --prefer-source --no-interaction
+
+script:
+  - vendor/bin/phpunit
+  - bash <(curl -s https://codecov.io/bash)
+
+after_script:
+  - vendor/bin/test-reporter

@@ -7,6 +7,18 @@
         "name": "Muhammad Arif Shabab",
         "email": "shabab.softwares@gmail.com"
     }],
+    "keywords": [
+        "framework",
+        "laravel",
+        "PHP",
+        "friendship",
+        "circle",
+        "friend",
+        "chat",
+        "message",
+        "mutual",
+        "group"
+    ],
     "autoload-dev": {
         "classmap": [
             "vendor/laravel/laravel/tests/TestCase.php"
